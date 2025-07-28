@@ -1,0 +1,27 @@
+[General]
+name = 小桔充电去广告
+description = 移除小桔充电小程序内的广告推广内容，优化使用体验
+version = 1.0.0
+author = YourName  # 请替换为您的名字
+updateTime = 2025-07-29 00:15:01
+homepage = https://github.com/YourAccount  # 可选替换为您的项目主页
+minimumLoonVersion = 3.2.0
+icon = https://example.com/icon.png  # 可选图标URL
+
+[Plugin]
+# 插件类型设置为module
+type = module
+
+[MITM]
+hostname = energy.xiaojukeji.com
+
+[Rule]
+# 广告屏蔽规则 - 使用REJECT-DICT（返回空JSON）避免客户端报错
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center url reject-dict
+
+# 备用规则：防止新增广告路径
+^https:\/\/energy\.xiaojukeji\.com\/.*\/advert/ url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/.*\/promotion/ url reject-dict
