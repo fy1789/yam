@@ -1,0 +1,15 @@
+[Plugin]
+name = 小桔充电去广告
+desc = 去除小桔充电小程序页面内广告推广
+author = YourName
+module = rule
+
+[Rule]
+# 小桔充电广告拦截规则
+URL-REGEX:^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo, REJECT
+URL-REGEX:^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail, REJECT
+URL-REGEX:^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display, REJECT
+URL-REGEX:^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center, REJECT
+
+[MITM]
+hostname = energy.xiaojukeji.com
