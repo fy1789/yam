@@ -1,0 +1,25 @@
+[General]
+name = 小桔充电去广告
+description = 移除小桔充电小程序内的广告推广内容
+version = 1.0
+author = YourName
+updateTime = 2023-11-30
+
+[MITM]
+hostname = energy.xiaojukeji.com
+
+[Rule]
+# 屏蔽活动信息广告
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo url reject-dict
+
+# 屏蔽页面详情广告
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
+
+# 屏蔽资源展示广告
+^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
+
+# 屏蔽会员中心广告
+^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center url reject-dict
+
+# 备用规则：屏蔽未知推广请求
+^https:\/\/energy\.xiaojukeji\.com\/.*\/advertisement\/ url reject-dict
