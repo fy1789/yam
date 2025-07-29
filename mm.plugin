@@ -1,10 +1,6 @@
 [General]
-name = 小桔充电去广告
-description = 移除小桔充电小程序内的广告推广内容，优化用户体验。建议卸载后重新安装小程序使规则完全生效
-version = 1.0.0
-updateTime = 2025-07-29 01:23:45
-homepage = https://github.com/YourAccount # 可替换为您的项目主页
-author = @YourName # 请替换为您的昵称
+name = 自用去广告
+#description = 
 minimumLoonVersion = 3.2.0
 icon = https://example.com/icon.png # 可选图标URL
 enabled = true
@@ -12,8 +8,14 @@ enabled = true
 [MITM]
 hostname = energy.xiaojukeji.com
 
+
+[Rule]
+
+
+
+
 [Rewrite]
-# 广告拦截规则
+# 小桔充电小程序去广告
 ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
