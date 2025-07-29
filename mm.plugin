@@ -6,7 +6,7 @@ icon = https://example.com/icon.png # 可选图标URL
 enabled = true
 
 [MITM]
-hostname = energy.xiaojukeji.com
+hostname = energy.xiaojukeji.com，gw3.ykccn.com
 
 
 [Rule]
@@ -20,4 +20,8 @@ hostname = energy.xiaojukeji.com
 ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center url reject-dict
+# 云快充 YKC小程序
+^https:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/enterpriseWeChatConfig\/app\/queryCityConfig url reject-dict
+^https:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/appAdvertising\/queryAdvertisingByParams url reject-dict
+^https:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/charge\/activity\/package\/newest url reject-dict
 
