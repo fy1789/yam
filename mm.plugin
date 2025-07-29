@@ -12,14 +12,10 @@ enabled = true
 [MITM]
 hostname = energy.xiaojukeji.com
 
-[Rule]
+[Rewrite]
 # 广告拦截规则
 ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
 ^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center url reject-dict
 
-# 备用广告拦截规则
-^https:\/\/energy\.xiaojukeji\.com\/.*\/advert/ url reject-dict
-^https:\/\/energy\.xiaojukeji\.com\/.*\/promotion/ url reject-dict
-^https:\/\/energy\.xiaojukeji\.com\/.*\/market/ url reject-dict
